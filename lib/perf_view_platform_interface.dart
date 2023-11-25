@@ -26,4 +26,12 @@ abstract class PerfViewPlatform extends PlatformInterface {
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  Future<List<Object?>?> getNetworkInfo() {
+    throw UnimplementedError('getNetworkInfo() has not been implemented.');
+  }
+
+  Future<List<Object?>?> getMemoryInfo() {
+    throw UnimplementedError('getMemoryInfo() has not been implemented.');
+  }
 }

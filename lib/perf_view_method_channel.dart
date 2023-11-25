@@ -11,7 +11,22 @@ class MethodChannelPerfView extends PerfViewPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
+  }
+
+  @override
+  Future<List<Object?>?> getNetworkInfo() async {
+    final networkInfo =
+        await methodChannel.invokeMethod<List<Object?>?>('getNetworkInfo');
+    return networkInfo!;
+  }
+
+  @override
+  Future<List<Object?>?> getMemoryInfo() async {
+    final memInfo =
+        await methodChannel.invokeMethod<List<Object?>?>('getMemoryInfo');
+    return memInfo!;
   }
 }

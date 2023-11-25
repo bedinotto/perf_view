@@ -1,8 +1,4 @@
+library performance_analyzer;
 
-import 'perf_view_platform_interface.dart';
+export 'src/performance_analyzer_widget.dart';
 
-class PerfView {
-  Future<String?> getPlatformVersion() {
-    return PerfViewPlatform.instance.getPlatformVersion();
-  }
-}

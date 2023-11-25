@@ -1,7 +1,7 @@
 name: perf_view
-description: A new Flutter plugin project.
+description: A plugin to help developers monitor the apps resources.
 version: 0.0.1
-homepage:
+homepage: https://github.com/bedinotto/perf_view
 
 environment:
   sdk: '>=3.1.5 <4.0.0'
@@ -16,6 +16,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  vm_service: '>=13.0.0 <14.0.0'
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
