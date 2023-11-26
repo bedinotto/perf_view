@@ -23,7 +23,6 @@ class NetView extends StatefulWidget {
 }
 
 class _NetViewState extends State<NetView> {
-  List<int> _netData = [];
   List<List<int>> _database = [];
   int _rxMax = 0;
   int _txMax = 0;
@@ -50,7 +49,7 @@ class _NetViewState extends State<NetView> {
 
   Future<void> getNetworkInfo() async {
     if (!mounted) return;
-    
+
     List<Object?>? networkInfo;
     final List<List<int>> dataAux = _database;
     int rxMax = _rxMax;
@@ -96,10 +95,6 @@ class _NetViewState extends State<NetView> {
     }
 
     setState(() {
-      _netData = [
-        int.tryParse(networkInfo![0].toString())!,
-        int.tryParse(networkInfo[1].toString())!,
-      ];
       _database = dataAux;
       _rxMax = rxMax;
       _txMax = txMax;
