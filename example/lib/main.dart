@@ -44,11 +44,11 @@ void main() {
   runApp(
     const PerformanceAnalyzerWidget(
       // disable: true,
-      backgroundNetwork: Color(0xff0000ff),
-      alignmentFPS: Alignment.bottomRight,
-      alignmentMemory: Alignment.topLeft,
-      alignmentNetwork: Alignment.center,
-      activateMemory: false,
+      // backgroundNetwork: Color(0xff0000ff),
+      // alignmentFPS: Alignment.bottomRight,
+      // alignmentMemory: Alignment.topLeft,
+      // alignmentNetwork: Alignment.center,
+      // activateMemory: false,
       // activateNetwork: false,
       child: MyApp(),
     ),
@@ -84,10 +84,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   final List<int> theList = [];
-  // String _platformVersion = 'Unknown';
-  // List<Object?> _networkInfo = [];
-  // final _perfViewPlugin = PerfView();
-  // String _albumName = "";
   Album _album = const Album(
     userId: -1,
     id: -1,
@@ -96,7 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _makeRequest() async {
     final album = await fetchAlbum(_counter + 1);
-    // print(album.title);
     setState(() {
       _album = album;
     });
@@ -107,56 +102,6 @@ class _MyHomePageState extends State<MyHomePage> {
     theList.add(_counter);
     setState(() {});
   }
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   initPlatformState();
-  //   updateNetworkInfo();
-  // }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  // Future<void> initPlatformState() async {
-  //   String platformVersion;
-  //   // Platform messages may fail, so we use a try/catch PlatformException.
-  //   // We also handle the message potentially returning null.
-  //   try {
-  //     platformVersion = await _perfViewPlugin.getPlatformVersion() ??
-  //         'Unknown platform version';
-  //   } on PlatformException {
-  //     platformVersion = 'Failed to get platform version.';
-  //   }
-
-  //   // If the widget was removed from the tree while the asynchronous platform
-  //   // message was in flight, we want to discard the reply rather than calling
-  //   // setState to update our non-existent appearance.
-  //   if (!mounted) return;
-
-  //   setState(() {
-  //     _platformVersion = platformVersion;
-  //   });
-  // }
-
-  // Future<void> getNetworkInfo() async {
-  //   List<Object?> networkInfo;
-  //   try {
-  //     networkInfo = await _perfViewPlugin.getNetworkInfo("perf_view_example");
-  //     // print("networkInfo: $networkInfo");
-  //   } on PlatformException {
-  //     networkInfo = <int>[-1, -1];
-  //   }
-
-  //   if (!mounted) return;
-
-  //   setState(() {
-  //     _networkInfo = networkInfo;
-  //   });
-  // }
-
-  // void updateNetworkInfo() {
-  //   getNetworkInfo();
-  //   Future.delayed(const Duration(seconds: 2), () => updateNetworkInfo());
-  // }
 
   @override
   void dispose() {

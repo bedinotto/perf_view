@@ -1,3 +1,11 @@
-## 0.0.1
+## 1.0.0 - First Release
 
-* TODO: Describe initial release.
+Options available on Android:
+
+* FPS counter and frame time chart
+* Network traffic chart
+* Memory info
+
+Options available on iOS:
+
+* FPS counter and frame time chart

@@ -1,6 +1,6 @@
 name: perf_view
 description: A plugin to help developers monitor the apps resources.
-version: 0.0.1
+version: 1.0.0
 homepage: https://github.com/bedinotto/perf_view
 
 environment:
